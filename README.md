@@ -18,7 +18,8 @@ Yazılım geliştirme ve test süreçlerinde kullanılan bulut tabanlı platform
 * **Sınırlılıklar:** Çalışma, QEMU/KVM sanallaştırma katmanı üzerinde çalıştırılan Windows (7, 8.1, 10, 11, LTSC sürümleri), Linux işletim sistemleri, seçilen uzaktan erişim protokolleri ve bu protokollerin kullandığı kodekler ile sınırlıdır.
 
 ## Ekipler ve rolleri
-* **Geliştirici / Araştırmacı:** **@mstfsmtcnkr** - Sistem mimarisinin kurulması, uzaktan erişim protokollerinin entegrasyonu, performans testlerinin yürütülmesi ve veri analizi.
+* **Geliştirici / Araştırmacı:**
+* **@mstfsmtcnkr** - Sistem mimarisinin kurulması, uzaktan erişim protokollerinin entegrasyonu, performans testlerinin yürütülmesi ve veri analizi.
 
 ## Literatür(Ön yüz taraması)
 * **Magaña, E., Izquierdo, R., & Perallos, A. (2019).** *Remote access protocols for Desktop-as-a-Service solutions: A performance comparison.* PLOS ONE, 14(1), e0207512.
