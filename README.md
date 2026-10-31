@@ -1,6 +1,6 @@
 # msc-research
 
-# Bulut Tabanlı Geliştirme Altyapılarında Açık Kaynaklı Araçlarla Alternatif OS Entegrasyonu, Sistem Optimizasyonu ve İstemci Akış Performansı Analizi
+# BULUT TABANLI GELİŞTİRME ALTYAPILARINDA AÇIK KAYNAKLI ARAÇLARLA ALTERNATİF OS ENTEGRASYONU, SİSTEM OPTİMİZASYONU VE İSTEMCİ AKIŞ PERFORMANSI ANALİZİ
 
 ## Konu ve problem durumu
 Yazılım geliştirme ve test süreçlerinde kullanılan bulut tabanlı platformların; mobil cihaz kullanan veya yerel donanım imkânsızlığı yaşayan bireyler tarafından tam donanımlı bir masaüstü çalışma ortamı olarak kullanılabilirliğinin ve sınırlarının net olmaması. Tam donanımlı masaüstü yazılımlarına doğrudan erişilememesi ve mimari uyumsuzluklar nedeniyle başvurulan bu ücretsiz veya düşük maliyetli bulut platformlarının, kullanıcıya masaüstü işlevselliğini kazandırmadaki yetkinliği ile bu süreçte karşılaşılan performans ve erişilebilirlik kısıtlarının bilinmemesi.
@@ -39,6 +39,7 @@ Yazılım geliştirme ve test süreçlerinde kullanılan bulut tabanlı platform
 İlk aşamada bulut geliştirme ortamı içerisine alternatif bir işletim sistemi ve gerekli uzaktan erişim katmanları kurulacaktır. Kurulan bu sistem üzerinde farklı protokoller denenerek elde edilen performans kayıtları SQLite veritabanında toplanacak ve metrik bazlı kıyaslama ile zaman serisi analizi yapılacaktır.(değişebilir)
 
 ## Kaynakça
-* Balen, J., Zagar, D., & Hocenski, Z. (2020). Performance evaluation of Windows virtual machines on a Linux host. *Automatika*, 61(3), 425–435.
-* Magaña, E., Izquierdo, R., & Perallos, A. (2019). Remote access protocols for Desktop-as-a-Service solutions: A performance comparison. *PLOS ONE*, 14(1), e0207512.
-* Sobieraj, S., & Kotyński, G. (2024). Docker Performance Evaluation across Operating Systems. *Applied Sciences*, 14(15), 6672.
+
+* Magaña, E., Sesma, I., Morató, D., & Izal, M. (2019). Remote access protocols for Desktop-as-a-Service solutions. *PLOS ONE*, 14(1), e0207512. https://doi.org/10.1371/journal.pone.0207512
+* Balen, J., Vdovjak, K., & Martinović, G. (2020). Performance evaluation of Windows virtual machines on a Linux host. *Automatika*, 61(3), 425–435. https://doi.org/10.1080/00051144.2020.1775961
+* Sobieraj, M., & Kotyński, D. (2024). Docker Performance Evaluation across Operating Systems. *Applied Sciences*, 14(15), 6672. https://doi.org/10.3390/app14156672
