@@ -39,6 +39,39 @@ Yazılım geliştirme ve test süreçlerinde kullanılan bulut tabanlı platform
 ## İlk yöntem:
 İlk aşamada bulut geliştirme ortamı içerisine alternatif bir işletim sistemi ve gerekli uzaktan erişim katmanları kurulacaktır. Kurulan bu sistem üzerinde farklı protokoller denenerek elde edilen performans kayıtları SQLite veritabanında toplanacak ve metrik bazlı kıyaslama ile zaman serisi analizi yapılacaktır.(değişebilir)
 
+## UML Diyagramları ve Açıklamaları
+
+### 1. Use Case Diagram (Kullanım Durumu Diyagramı)
+![Use Case Diagram](docs/uml/use_case_diagram.png)
+
+* **Sisteme Giriş Yap:** Kullanıcı aktörü, bulut platformundaki oturumunu başlatmak için sisteme yetkili olarak giriş yapar.
+* **Uygulama ve Donanım Parametrelerini Seç:** Kullanıcı, çalıştırılacak alternatif işletim sisteminin donanım ve yazılım gereksinimlerini belirler.
+* **Kişisel Ayarlamaları Yap (`<<include>>`):** Parametre seçimi adımıyla doğrudan bağlantılı çalışan bu alt modül, kullanıcının özel oturum ve ortam tercihlerini sisteme tanımlar.
+* **Otomatik Paket Kurulumunu Başlat:** Seçilen konfigürasyona uygun olarak konteyner/sanallaştırma ortamında otomatik paket ve sistem kurulumları tetiklenir.
+* **Kurulan Bulut Tabanlı OS'a Giriş Yap:** Kurulum tamamlandıktan sonra kullanıcı masaüstü ortamına erişim sağlar.
+* **Ağ Portlarını ve Protokolünü Yapılandır (`<<include>>`):** Erişim adımıyla entegre çalışan bu alt modül, istemci akış performansı için gerekli port yönlendirmelerini ve düşük gecikmeli görüntü akış protokollerini aktif eder.
+
+---
+
+### 2. Activity Diagram (Etkinlik Diyagramı)
+![Activity Diagram](docs/uml/activity_diagram.png)
+
+* **Başlangıç (`●`):** Akış, başlangıç düğümü ile başlar ve kullanıcının sisteme giriş yapmasıyla aktifleşir.
+* **OS ve Donanım Profili Seçilir:** Kullanıcı tarafından hedeflenen sistem ve donanım parametreleri sisteme girilir.
+* **Kaynak Seçimi Uygun mu? (Karar Karosu):** Sistem, seçilen konfigürasyonun bulut sunucu kaynakları ile uyumlu olup olmadığını denetler.
+* **Hata Kodu Verilir (Hayır Kolu):** Kaynak seçimi uygun değilse (`hayır`), kullanıcıya hata kodu verilerek akış tekrar profil seçimi adımına yönlendirilir.
+* **Otomatik Paket Kurulumu ve Yapılandırma (Evet Kolu):** Kaynaklar uygunsa (`evet`), otomatik paket kurulumuna başlanır ve hemen ardından ağ portları ile akış protokolleri yapılandırılır.
+* **Bitiş (`◎`):** OS erişimi sağlanarak süreç başarıyla tamamlanır ve bitiş düğümü ile sonlandırılır.
+
+---
+
+### 3. Class Diagram (Sınıf Diyagramı)
+![Class Diagram](docs/uml/class_diagram.png)
+
+* **Kullanıcı Sınıfı:** Sisteme erişim sağlayan kullanıcının kimlik bilgisini (`+ kullaniciID: String`) ve oturum durumunu (`- AktifDurum: Boolean`) temsil eden veri sınıfıdır.
+* **SistemYoneticisi Sınıfı:** Kullanıcıdan gelen talebe göre arka planda seçilen işletim sistemini (`+ secilenOS: String`) ve donanım profilini (`- donanimProfili: String`) yöneten ana kontrol sınıfıdır.
+* **BulutOSErisim Sınıfı:** Kurulum tamamlandıktan sonra istemcinin canlı akış görüntüsüne ve masaüstü arayüzüne erişebilmesi için gerekli IP adresini (`+ erisimIP: String`) ve port numarasını (`- PortNumarasi: Integer`) tanımlayan erişim sınıfıdır.
+
 ## Kaynakça
 
 * Magaña, E., Sesma, I., Morató, D., & Izal, M. (2019). Remote access protocols for Desktop-as-a-Service solutions. *PLOS ONE*, 14(1), e0207512. https://doi.org/10.1371/journal.pone.0207512
