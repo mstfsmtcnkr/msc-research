@@ -1,0 +1,11 @@
+olcum_no,zaman,cpu_yuzde,ram_kullanimi_mb,akis_gecikmesi_ms,olcum_kanali,kvm_durumu
+Ornek_1,07:25:49,12.12,8910.64,13.22,noVNC_8006,Aktif
+Ornek_2,07:25:50,2.53,8910.29,0.75,noVNC_8006,Aktif
+Ornek_3,07:25:51,6.06,8916.82,0.72,noVNC_8006,Aktif
+Ornek_4,07:25:52,2.51,8916.82,0.69,noVNC_8006,Aktif
+Ornek_5,07:25:53,2.01,8916.82,0.71,noVNC_8006,Aktif
+Ornek_6,07:25:54,2.01,8916.81,0.76,noVNC_8006,Aktif
+Ornek_7,07:25:55,2.02,8917.48,0.63,noVNC_8006,Aktif
+Ornek_8,07:25:56,1.52,8922.75,0.7,noVNC_8006,Aktif
+Ornek_9,07:25:57,2.02,8923.14,0.72,noVNC_8006,Aktif
+Ornek_10,07:25:58,2.53,8923.12,0.74,noVNC_8006,Aktif
